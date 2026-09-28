@@ -9,7 +9,7 @@ with col1:
  
  st.subheader("Vectores y Matrices")
  image = Image.open('Vectores.jpg')
- st.image(image, width=190)
+ st.image(image, width=200)
  st.write("En la siguiente enlace encontraras la app de las frutas desplegada en streamlit") 
  url = "https://clase2pa-frutas.streamlit.app/"
  st.write(f" [Frutas]({url})")
@@ -38,7 +38,7 @@ with col2:
 
  st.subheader("Aplicación Preparación de datos")
  image = Image.open('AplicacionPrep.jpg')
- st.image(image, width=190)
+ st.image(image, width=200)
  st.write("En la siguiente enlace veremos una estacion de CORNARE de agua la cual nos mostrara datos sobre el nivel del agua") 
  url = "https://clase6pa-redagua.streamlit.app/"
  st.write(f" [Estación]({url})")
@@ -54,7 +54,7 @@ with col2:
 with col3: 
  st.subheader("Series de Tiempo.")
  image = Image.open('Tiempo.jpg')
- st.image(image, width=190)
+ st.image(image, width=200)
  st.write("En la siguiente veremos una aplicación que busca mostrarnos como usar una serie de tiempo usando ARIMA") 
  url = "https://clase-8-pa-series-tiempo.streamlit.app/"
  st.write(f" [Series Tiempo]({url})")

@@ -21,8 +21,8 @@ with col1:
  url = "https://clase3paminimo.streamlit.app/"
  st.write(f" [Gradiente interactivo]({url})")
 
- st.subheader(" Lógica, Big-O y Vectorización")
- image = Image.open('Bigo.jpg')
+ st.subheader("Lógica, Big-O y Vectorización")
+ image = Image.open('Bigo.png')
  st.image(image, width=200)
  st.write("En la siguiente enlace veremos tenemos un detector de anomalias el cual usa Lógica y Big-O") 
  url = "https://clase4pa.streamlit.app/"

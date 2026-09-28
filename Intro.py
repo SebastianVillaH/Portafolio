@@ -22,7 +22,7 @@ with col1:
  st.write(f" [Gradiente interactivo]({url})")
 
  st.subheader(" Lógica, Big-O y Vectorización")
- image = Image.open('Big-o.jpg')
+ image = Image.open('Bigo.jpg')
  st.image(image, width=200)
  st.write("En la siguiente enlace veremos tenemos un detector de anomalias el cual usa Lógica y Big-O") 
  url = "https://clase4pa.streamlit.app/"

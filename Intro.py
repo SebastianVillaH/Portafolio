@@ -74,7 +74,7 @@ with col3:
  st.write(f" [Predictor Termico]({url})")
 
 with col4:
-   st.subheader("De la regresión lineal a la logísitica.")
+ st.subheader("De la regresión lineal a la logísitica.")
  image = Image.open('RDL.jpg')
  st.image(image, width=200)
  st.write("En la siguiente enlace veremos una aplicación que busca predecir si en los siguientes dias llovera") 

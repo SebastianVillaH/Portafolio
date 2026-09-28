@@ -1,90 +1,64 @@
 import streamlit as st
 from PIL import Image
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
+def cargar_imagen(nombre):
+    ruta = BASE_DIR / nombre
+    if not ruta.exists():
+        archivos = {f.name.lower(): f for f in BASE_DIR.iterdir() if f.is_file()}
+        ruta = archivos.get(nombre.lower(), ruta)
+    return Image.open(ruta)
+
+def tarjeta(titulo, imagen, ancho, descripcion, url, etiqueta):
+    st.subheader(titulo)
+    st.image(cargar_imagen(imagen), width=ancho)
+    st.write(descripcion)
+    st.write(f"[{etiqueta}]({url})")
+
 st.title("Portafolio de Sebastián Villa Hernández")
 
-st.write(f"En esta pagina encontraras las aplicaciones desplegadas en streamlit, indicado por el titulo de la clase en la que se hizo")
+st.write("En esta pagina encontraras las aplicaciones desplegadas en streamlit, indicado por el titulo de la clase en la que se hizo")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
- 
- st.subheader("Vectores y Matrices")
- image = Image.open('Vectores.jpg')
- st.image(image, width=190)
- st.write("En la siguiente enlace encontraras la app de las frutas desplegada en streamlit") 
- url = "https://clase2pa-frutas.streamlit.app/"
- st.write(f" [Frutas]({url})")
+    tarjeta("Vectores y Matrices", "Vectores.jpg", 190,
+            "En la siguiente enlace encontraras la app de las frutas desplegada en streamlit",
+            "https://clase2pa-frutas.streamlit.app/", "Frutas")
+    tarjeta("Calculo aplicado, gradiente.", "Gradiente.jpg", 200,
+            "En la siguiente enlace tendremos un descenso de gradiente interactivo",
+            "https://clase3paminimo.streamlit.app/", "Gradiente interactivo")
+    tarjeta("Lógica, Big-O y Vectorización", "Big-o.jpg", 200,
+            "En la siguiente enlace veremos tenemos un detector de anomalias el cual usa Lógica y Big-O",
+            "https://clase4pa.streamlit.app/", "Detector")
 
- st.subheader("Calculo aplicado, gradiente.")
- image = Image.open('Gradiente.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace tendremos un descenso de gradiente interactivo") 
- url = "https://clase3paminimo.streamlit.app/"
- st.write(f" [Gradiente interactivo]({url})")
+with col2:
+    tarjeta("Preparación de datos", "Prep.jpg", 200,
+            "En la siguiente veremos una aplicación que recoge datos, los procesa y nos lo muestra",
+            "https://clase5pa26agosto.streamlit.app/", "Preparación de datos")
+    tarjeta("Aplicación Preparación de datos", "AplicacionPrep.jpg", 190,
+            "En la siguiente enlace veremos una estacion de CORNARE de agua la cual nos mostrara datos sobre el nivel del agua",
+            "https://clase6pa-redagua.streamlit.app/", "Estación")
+    tarjeta("Regresión Lineal", "Regresion.jpg", 200,
+            "En la siguiente enlace veremos una aplicación que busca mostrarnos el uso de la Regresión Lineal",
+            "https://clase7-pa.streamlit.app/", "Regresión Lineal")
 
- st.subheader(" Lógica, Big-O y Vectorización")
- image = Image.open('Big-o.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos tenemos un detector de anomalias el cual usa Lógica y Big-O") 
- url = "https://clase4pa.streamlit.app/"
- st.write(f" [Detector]({url})")
-
-with col2: 
- st.subheader("Preparación de datos")
- image = Image.open('Prep.jpg')
- st.image(image, width=200)
- st.write("En la siguiente veremos una aplicación que recoge datos, los procesa y nos lo muestra") 
- url = "https://clase5pa26agosto.streamlit.app/"
- st.write(f" [Preparación de datos]({url})")
-
- st.subheader("Aplicación Preparación de datos")
- image = Image.open('AplicacionPrep.jpg')
- st.image(image, width=190)
- st.write("En la siguiente enlace veremos una estacion de CORNARE de agua la cual nos mostrara datos sobre el nivel del agua") 
- url = "https://clase6pa-redagua.streamlit.app/"
- st.write(f" [Estación]({url})")
-
- st.subheader("Regresión Lineal")
- image = Image.open('Regresion.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos una aplicación que busca mostrarnos el uso de la Regresión Lineal") 
- url = "https://clase7-pa.streamlit.app/"
- st.write(f" [Regresión Lineal]({url})")
-
-
-with col3: 
- st.subheader("Series de Tiempo.")
- image = Image.open('Tiempo.jpg')
- st.image(image, width=190)
- st.write("En la siguiente veremos una aplicación que busca mostrarnos como usar una serie de tiempo usando ARIMA") 
- url = "https://clase-8-pa-series-tiempo.streamlit.app/"
- st.write(f" [Series Tiempo]({url})")
-
- st.subheader("Predicción y modelado de la calidad de aire.")
- image = Image.open('Aire.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos una aplicacion que busca predecir la calidad del aire usando una estacion de CORNARE, subiendo un archivo con los datos") 
- url = "https://clase-9-aire.streamlit.app/"
- st.write(f" [Predictor Aire]({url})")
- 
- st.subheader("Predicción de sensacion termica con IoT")
- image = Image.open('Termica.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos una aplicación que busca predecir la sensación termica, conectandose a una base de datos externa") 
- url = "https://clase10-pa.streamlit.app/"
- st.write(f" [Predictor Termico]({url})")
+with col3:
+    tarjeta("Series de Tiempo.", "Tiempo.jpg", 190,
+            "En la siguiente veremos una aplicación que busca mostrarnos como usar una serie de tiempo usando ARIMA",
+            "https://clase-8-pa-series-tiempo.streamlit.app/", "Series Tiempo")
+    tarjeta("Predicción y modelado de la calidad de aire.", "Aire.jpg", 200,
+            "En la siguiente enlace veremos una aplicacion que busca predecir la calidad del aire usando una estacion de CORNARE, subiendo un archivo con los datos",
+            "https://clase-9-aire.streamlit.app/", "Predictor Aire")
+    tarjeta("Predicción de sensacion termica con IoT", "Termica.jpg", 200,
+            "En la siguiente enlace veremos una aplicación que busca predecir la sensación termica, conectandose a una base de datos externa",
+            "https://clase10-pa.streamlit.app/", "Predictor Termico")
 
 with col4:
- st.subheader("De la regresión lineal a la logísitica.")
- image = Image.open('RDL.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos una aplicación que busca predecir si en los siguientes dias llovera") 
- url = "https://clase11pa.streamlit.app/"
- st.write(f" [Predictor Lluvia]({url})")
-
- st.subheader("Clasificación Knn")
- image = Image.open('KNN.jpg')
- st.image(image, width=200)
- st.write("En la siguiente enlace veremos una aplicación que clasifica el suelo segun sus datos vecinos") 
- url = "https://clase-13-tierra.streamlit.app/"
- st.write(f" [KNN Suelos]({url})")
-
+    tarjeta("De la regresión lineal a la logísitica.", "RDL.jpg", 200,
+            "En la siguiente enlace veremos una aplicación que busca predecir si en los siguientes dias llovera",
+            "https://clase11pa.streamlit.app/", "Predictor Lluvia")
+    tarjeta("Clasificación Knn", "KNN.jpg", 200,
+            "En la siguiente enlace veremos una aplicación que clasifica el suelo segun sus datos vecinos",
+            "https://clase-13-tierra.streamlit.app/", "KNN Suelos")

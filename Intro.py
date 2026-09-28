@@ -30,7 +30,7 @@ with col1:
 
 with col2: 
  st.subheader("Preparación de datos")
- image = Image.open('Prep.jpg')
+ image = Image.open('Prep.png')
  st.image(image, width=200)
  st.write("En la siguiente veremos una aplicación que recoge datos, los procesa y nos lo muestra") 
  url = "https://clase5pa26agosto.streamlit.app/"
@@ -60,7 +60,7 @@ with col3:
  st.write(f" [Series Tiempo]({url})")
 
  st.subheader("Predicción y modelado de la calidad de aire.")
- image = Image.open('Aire.jpg')
+ image = Image.open('Aire.png')
  st.image(image, width=200)
  st.write("En la siguiente enlace veremos una aplicacion que busca predecir la calidad del aire usando una estacion de CORNARE, subiendo un archivo con los datos") 
  url = "https://clase-9-aire.streamlit.app/"

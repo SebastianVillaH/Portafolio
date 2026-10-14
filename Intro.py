@@ -17,6 +17,7 @@ proyectos = [
     ("Lógica, Big-O y Vectorización", "Bigo.png", "En la siguiente enlace veremos tenemos un detector de anomalias el cual usa Lógica y Big-O", "https://clase4pa.streamlit.app/", "Detector"),
     ("Regresión Lineal", "Regresion.jpg", "En la siguiente enlace veremos una aplicación que busca mostrarnos el uso de la Regresión Lineal", "https://clase7-pa.streamlit.app/", "Regresión Lineal"),
     ("Predicción de sensacion termica con IoT", "Termica.jpg", "En la siguiente enlace veremos una aplicación que busca predecir la sensación termica, conectandose a una base de datos externa", "https://clase10-pa.streamlit.app/", "Predictor Termico"),
+    ("Proyecto de energia", "energia.jpg", "En el siguiente enlace veremos una aplicacion que nos ayuda a predecir consumo energetico." "https://clase-15.streamlit.app/", "Proyecto energia"),
 ]
 
 COLUMNAS = 3

@@ -18,6 +18,7 @@ proyectos = [
     ("Regresión Lineal", "Regresion.jpg", "En la siguiente enlace veremos una aplicación que busca mostrarnos el uso de la Regresión Lineal", "https://clase7-pa.streamlit.app/", "Regresión Lineal"),
     ("Predicción de sensacion termica con IoT", "Termica.jpg", "En la siguiente enlace veremos una aplicación que busca predecir la sensación termica, conectandose a una base de datos externa", "https://clase10-pa.streamlit.app/", "Predictor Termico"),
     ("Proyecto de energia", "energia.jpg", "En el siguiente enlace veremos una aplicacion que nos ayuda a predecir consumo energetico.", "https://clase-15.streamlit.app/", "Proyecto energia"),
+    ("Fundamentos de computación paralela", "Compt.jpg", "En el siguiente enlace veremos una aplicación que nos ayudara a ver la eficiencia de y paralelismo del idioma de programacion python", "https://clase16-cpu-gpu.streamlit.app/", "Computacion paralela"),
 ]
 
 COLUMNAS = 3

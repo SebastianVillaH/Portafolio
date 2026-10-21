@@ -19,7 +19,7 @@ proyectos = [
     ("Predicción de sensacion termica con IoT", "Termica.jpg", "En la siguiente enlace veremos una aplicación que busca predecir la sensación termica, conectandose a una base de datos externa", "https://clase10-pa.streamlit.app/", "Predictor Termico"),
     ("Proyecto de energia", "energia.jpg", "En el siguiente enlace veremos una aplicacion que nos ayuda a predecir consumo energetico.", "https://clase-15.streamlit.app/", "Proyecto energia"),
     ("Fundamentos de computación paralela", "Compt.jpg", "En el siguiente enlace veremos una aplicación que nos ayudara a ver la eficiencia de y paralelismo del idioma de programacion python", "https://clase16-cpu-gpu.streamlit.app/", "Computacion paralela"),
-    ("Despliegue de modelos", "Mod.jpg", "Esta ves tenemos 2 enlaces los cuales son los que nos llevaran a distintas app de modelos predictivos uno de lluvia y otro de vivienda este link nos llevara al de vivienda", "https://clase17-vivienda.vercel.app/","Modelo de vivienda")
+    ("Despliegue de modelos", "Mod.jpg", "Esta ves tenemos 2 enlaces los cuales son los que nos llevaran a distintas app de modelos predictivos uno de lluvia y otro de vivienda este link nos llevara al de vivienda", "https://clase17-vivienda.vercel.app/","Modelo de vivienda"),
     ("Despliegue de modelos", "Mod2.jpg", "Esta ves tenemos 2 enlaces los cuales son los que nos llevaran a distintas app de modelos predictivos uno de lluvia y otro de vivienda este link nos llevara al de lluvia", "https://clase-17-lluvia.vercel.app/","Modelo de lluvia"),
 ]
 
